@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue-2.4.0.js"></script>
+</head>
+<style>
+    .inner{
+        width: 500px;
+        height: 100px;
+        background-color: pink;
+        
+
+    }
+
+</style>
+
+<body>
+    <!-- Vue实例所控制的这个元素的区域,就是我们的v -->
+    <div id="app">
+
+        <div class="inner" @click="div01">
+            <input type="button" value="戳他" @click='btnhandler'>
+        </div>
+    </div>
+    <script>
+        //创建一个Vue的实例
+        //当我们导入包之后,在浏览器的内存中,就多了一个Vue构造函数
+        // 我们new出来的这个vm对象,就是我们mvvm中的vm调度者
+        var vm = new Vue({
+            el: '#app',//表示,当前我们new的这个Vue实例,要控制页面上的哪个区域
+            data: {//这里的data就是MVVM中的M专门用来保存每个页面的数据的
+                //data属性中,存放的是el中要用到的数据
+                msg: '欢迎学习Vue'//通过Vue提供的指令,很方便的就能把数据渲染到页面上,
+            },
+            methods:{
+                
+            }
+        })
+    </script>
+
+</body>
+
+</html>
